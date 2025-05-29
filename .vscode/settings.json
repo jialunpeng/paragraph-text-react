@@ -1,0 +1,72 @@
+{
+  "tabnine.experimentalAutoImports": true,
+  "editor.fontSize": 16,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "workbench.editor.showTabs": "single",
+  "cSpell.userWords": ["clsx", "ecommerce", "tailwindcss"],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.format.enable": true,
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveWorkspaceFilesOnly": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always", // 保存时自动修复 ESLint 问题
+    "source.fixAll.prettier": "always", // 保存时自动进行 Prettier 格式化
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "explorer.compactFolders": false,
+  "eslint.options": {},
+  "eslint.rules.customizations": [],
+  "editor.fontLigatures": false,
+  "cSpell.words": [
+    "changefreq",
+    "commision",
+    "entitys",
+    "FASSMOSS",
+    "FGVCON",
+    "lastmod",
+    "Qrcode",
+    "skus",
+    "Swiper",
+    "urlset",
+    "YOOFINDS"
+  ],
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "eslint.workingDirectories": [
+    { "mode": "auto" } // 自动检测工作目录
+  ]
+}

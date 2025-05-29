@@ -1,0 +1,49 @@
+.mention-link-container {
+  font-size: 14px;
+  font-weight: 500;
+
+  &.truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  > .mention-link-wrapper {
+    white-space: break-spaces;
+    text-decoration-color: rgb(51, 109, 244);
+
+    > a {
+      cursor: pointer;
+      text-decoration-skip: none;
+      color: #5780f4;
+      transition: color 0.3s ease;
+      text-decoration: none;
+      outline: none;
+      background: rgba(0, 0, 0, 0);
+      position: relative;
+
+      &.truncate {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        color: #5780f4;
+        background-color: rgb(51, 109, 244); /* 设置下划线颜色 */
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

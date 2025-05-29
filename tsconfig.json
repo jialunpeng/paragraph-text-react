@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
+    "outDir": "es",
+    "jsx": "react",
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "module": "es6",
+    "lib": ["es5", "dom"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -13,14 +12,20 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "baseUrl": "./",
+    "paths": {
+      "paragraph-text": ["components/index.tsx"],
+      "paragraph-text/icon": ["icon/index.js"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["components/**/*", "hooks/**/*", "icon/**/*"]
 }

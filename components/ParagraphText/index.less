@@ -1,0 +1,45 @@
+@import '../style/icon.less';
+
+.paragraph-text {
+  display: flex;
+  align-items: center;
+
+  &.hidden {
+    overflow: hidden;
+  }
+
+  > .content {
+    flex: 1;
+
+    &.truncate {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &.text-line-clamp {
+      display: -webkit-box;
+      white-space: normal;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: var(--line-clamp-num);
+    }
+
+    &.cursor-pointer {
+      cursor: pointer;
+    }
+  }
+
+  > .icon {
+    margin-left: 4px;
+    cursor: pointer;
+
+    &.icon-copy {
+      color: rgb(78, 89, 105);
+    }
+
+    &.icon-check {
+      color: green;
+    }
+  }
+}

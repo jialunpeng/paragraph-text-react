@@ -1,8 +1,47 @@
 {
-  "name": "paragraph-text",
-  "version": "0.1.0",
+  "name": "@paragraph-text/react",
+  "version": "1.1.0",
   "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "storybook": "storybook dev",
+    "build:lib": "pnpm run build:js && pnpm run build:types",
+    "build:js": "rollup -c rollup.config.js --environment MODE:production",
+    "build:types": "rollup -c rollup.config.js --config-only --plugin dts",
+    "test": "jest",
+    "lint": "eslint components --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint components --ext .ts,.tsx,.js,.jsx --fix",
+    "format": "prettier --write components",
+    "format:check": "prettier --check components",
+    "build:styles": "lessc components/style/index.less dist/css/index.min.css --clean-css='--advanced'",
+    "prepare": "pnpm lint-staged && husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js, ts, tsx}": [
+      "npx eslint components/ --fix"
+    ],
+    "*.{cjs,json}": [
+      "prettier --write"
+    ],
+    "*.{vue,html}": [
+      "eslint --fix"
+    ],
+    "*.{scss,css}": [],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
+    "@arco-design/web-react": "^2.66.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -11,23 +50,21 @@
     "@types/node": "^16.18.126",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
+    "dayjs": "^1.11.13",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-is": "^19.1.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
+    "react-use": "^17.6.0",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app",
+    "resolvePluginsRelativeTo": "."
   },
   "browserslist": {
     "production": [
@@ -40,5 +77,44 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.6",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.27.0",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-onboarding": "^8.6.14",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/preset-create-react-app": "^8.6.14",
+    "@storybook/react": "^8.6.14",
+    "@storybook/react-vite": "^8.6.14",
+    "@storybook/test": "^8.6.14",
+    "@types/react-is": "^19.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.33.0",
+    "@typescript-eslint/parser": "^8.33.0",
+    "@vitejs/plugin-react": "^4.5.0",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-storybook": "^0.12.0",
+    "globals": "^16.2.0",
+    "husky": "^8.0.0",
+    "less": "^4.3.0",
+    "less-plugin-clean-css": "^1.6.0",
+    "lint-staged": "^16.1.0",
+    "prettier": "^3.5.3",
+    "prop-types": "^15.8.1",
+    "rollup": "^4.41.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^8.6.14",
+    "typescript": "^4.9.5",
+    "typescript-eslint": "^8.33.0"
   }
 }

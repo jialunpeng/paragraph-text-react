@@ -1,17 +1,17 @@
 <div align="center">
 
-English | [简体中文](./README.zh-CN.md)
+[English](./README.md) | 简体中文
 
 </div>
 
-# Features
+# 特征
 
-## TypeScript friendly
+## TypeScript 友好
 
-All components are written in TypeScript so it's type friendly.
+所有组件都是用 TypeScript 编写的，所以天然的类型友好。
 
-# Installation
-Available as an npm package
+# 安装
+以npm 包形式提供
 
 ```shell
 // with npm
@@ -25,9 +25,9 @@ pnpm add @paragraph-text/react
 
 ```
 
-# examples
+# 示例
 
-## Default: Enable single-line overflow hiding
+## 默认开启单行超出隐藏
 ```ts
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -36,7 +36,7 @@ import 'paragraph-text/dist/css/index.min.css';
 
 function App() {
   return (
-    <ParagraphText text={'Long text'} />
+    <ParagraphText text={'长文本'} />
   );
 }
 
@@ -44,25 +44,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 
 ```
 
-## Enable multi-line overflow hiding, e.g., 2 lines
-
-```ts
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { ParagraphText } from '@paragraph-text/react';
-import 'paragraph-text/dist/css/index.min.css';
-
-function App() {
-  return (
-    <ParagraphText text={'Long text'} lineClamp={2} />
-  );
-}
-
-ReactDOM.render(<App />, document.getElementById('app'));
-
-```
-
-## Single-line overflow hiding with copy support
+## 开启多行超出隐藏，比如2行
 
 ```ts
 import React from 'react';
@@ -72,7 +54,7 @@ import 'paragraph-text/dist/css/index.min.css';
 
 function App() {
   return (
-    <ParagraphText text={'Long text'} copyable={true} />
+    <ParagraphText text={'长文本'} lineClamp={2} />
   );
 }
 
@@ -80,7 +62,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 
 ```
 
-## Multi-line overflow hiding with copy support
+## 单行超出隐藏并支持复制
 
 ```ts
 import React from 'react';
@@ -90,7 +72,7 @@ import 'paragraph-text/dist/css/index.min.css';
 
 function App() {
   return (
-    <ParagraphText text={'Long text'} lineClamp={2} copyable={true} />
+    <ParagraphText text={'长文本'} copyable={true} />
   );
 }
 
@@ -98,8 +80,26 @@ ReactDOM.render(<App />, document.getElementById('app'));
 
 ```
 
-## Default: Enable content intelligent recognition
-> intelligentRecognition: false Disable content recognition
+## 开启多行超出隐藏并支持复制
+
+```ts
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ParagraphText } from '@paragraph-text/react';
+import 'paragraph-text/dist/css/index.min.css';
+
+function App() {
+  return (
+    <ParagraphText text={'长文本'} lineClamp={2} copyable={true} />
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('app'));
+
+```
+
+## 默认开启内容智能识别
+> intelligentRecognition: false 关闭内容识别
 
 ```ts
 import React from 'react';
@@ -117,7 +117,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 
 ```
 
-## Enable rich text recognition
+## 开启富文本识别
 
 ```ts
 import React from 'react';
@@ -127,7 +127,7 @@ import 'paragraph-text/dist/css/index.min.css';
 
 function App() {
   return (
-    <ParagraphText text={<strong>rich text recognition</strong>} rich={true} />
+    <ParagraphText text={<strong>富文本识别</strong>} rich={true} />
   );
 }
 
@@ -135,9 +135,9 @@ ReactDOM.render(<App />, document.getElementById('app'));
 
 ```
 
-## Default: Show full content in a hover bubble when overflow is hidden
-> isToolTip: false Disable bubble display
- position: Bubble position settings
+## 默认开启超出隐藏后鼠标悬浮气泡展示全部
+> isToolTip: false 关闭气泡显示
+ position: 气泡位置设置
 
 ```ts
 import React from 'react';
@@ -147,7 +147,7 @@ import 'paragraph-text/dist/css/index.min.css';
 
 function App() {
   return (
-    <ParagraphText text={'Default: Show full content in a hover bubble when overflow is hidden'} />
+    <ParagraphText text={'默认开启超出隐藏鼠标悬浮气泡展示全部'} />
   );
 }
 
