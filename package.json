@@ -1,6 +1,6 @@
 {
   "name": "paragraph-text-react",
-  "version": "1.1.16",
+  "version": "1.1.17",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -136,6 +136,7 @@
     "gulp": "^5.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-less": "^5.0.0",
+    "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.1.4",
     "husky": "^8.0.0",
     "less": "^4.3.0",

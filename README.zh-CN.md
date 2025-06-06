@@ -1,4 +1,4 @@
-<div align="center">
+## 即时工具-在线markdown编辑器，给您所见即所得的编辑体验！<div align="center">
 
 [English](./README.md) | 简体中文
 
@@ -27,12 +27,53 @@ pnpm add paragraph-text-react
 
 # 示例
 
+## 基础使用
+```ts
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ParagraphText } from 'paragraph-text-react';
+import 'paragraph-text/dist/style/index.css';
+
+function App() {
+  return (
+    <ParagraphText text={'长文本'} />
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('app'));
+```
+
+## 按需加载
+
+### 使用 babel-plugin-import
+
+#### 1. 安装
+```shell
+npm i babel-plugin-import -D
+```
+#### 2. 添加配置：组件和样式的按需加载
+在 babel 配置中加入：
+```ts
+plugins: [
+  [
+    'babel-plugin-import',
+    {
+      libraryName: 'paragraph-text-react',
+      libraryDirectory: 'es',
+      camel2DashComponentName: false,
+      style: true, // 样式按需加载
+    },
+  ],
+];
+```
+
+
 ## 默认开启单行超出隐藏
 ```ts
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (
@@ -50,7 +91,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (
@@ -68,7 +109,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (
@@ -86,7 +127,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (
@@ -105,7 +146,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (
@@ -123,7 +164,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (
@@ -143,7 +184,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (

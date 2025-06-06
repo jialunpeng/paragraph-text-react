@@ -27,12 +27,52 @@ pnpm add paragraph-text-react
 
 # examples
 
+## Basic Usage
+```ts
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ParagraphText } from 'paragraph-text-react';
+import 'paragraph-text/dist/style/index.css';
+
+function App() {
+  return (
+    <ParagraphText text={'Long text'} />
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('app'));
+```
+
+## On-Demand Loading
+
+### Using babel-plugin-import
+
+#### 1. install
+```shell
+npm i babel-plugin-import -D
+```
+#### 2. Add Configuration: On-Demand Loading for Components and Styles
+Add the following to your Babel configuration:
+```ts
+plugins: [
+  [
+    'babel-plugin-import',
+    {
+      libraryName: 'paragraph-text-react',
+      libraryDirectory: 'es',
+      camel2DashComponentName: false,
+      style: true, // Enable on-demand style loading
+    },
+  ],
+];
+```
+
 ## Default: Enable single-line overflow hiding
 ```ts
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (
@@ -50,7 +90,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (
@@ -68,7 +108,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (
@@ -86,7 +126,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (
@@ -105,7 +145,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (
@@ -123,7 +163,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (
@@ -143,7 +183,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ParagraphText } from 'paragraph-text-react';
-import 'paragraph-text/dist/css/index.min.css';
+import 'paragraph-text/dist/style/index.css';
 
 function App() {
   return (

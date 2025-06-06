@@ -141,6 +141,9 @@ importers:
       gulp-less:
         specifier: ^5.0.0
         version: 5.0.0
+      gulp-rename:
+        specifier: ^2.0.0
+        version: 2.0.0
       gulp-replace:
         specifier: ^1.1.4
         version: 1.1.4
@@ -4164,6 +4167,10 @@ packages:
   gulp-less@5.0.0:
     resolution: {integrity: sha512-W2I3TewO/By6UZsM/wJG3pyK5M6J0NYmJAAhwYXQHR+38S0iDtZasmUgFCH3CQj+pQYw/PAIzxvFvwtEXz1HhQ==}
     engines: {node: '>=6'}
+
+  gulp-rename@2.0.0:
+    resolution: {integrity: sha512-97Vba4KBzbYmR5VBs9mWmK+HwIf5mj+/zioxfZhOKeXtx5ZjBk57KFlePf5nxq9QsTtFl0ejnHE3zTC9MHXqyQ==}
+    engines: {node: '>=4'}
 
   gulp-replace@1.1.4:
     resolution: {integrity: sha512-SVSF7ikuWKhpAW4l4wapAqPPSToJoiNKsbDoUnRrSgwZHH7lH8pbPeQj1aOVYQrbZKhfSVBxVW+Py7vtulRktw==}
@@ -12341,6 +12348,8 @@ snapshots:
       replace-ext: 2.0.0
       through2: 4.0.2
       vinyl-sourcemaps-apply: 0.2.1
+
+  gulp-rename@2.0.0: {}
 
   gulp-replace@1.1.4:
     dependencies:
