@@ -1,29 +1,5 @@
 import { AnchorHTMLAttributes, HTMLAttributes } from 'react';
 
-export interface MentionLinkProps
-  extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  /**
-   * @zh 显示的内容
-   * @en Displayed content
-   * @version 1.1.0
-   */
-  children?: React.ReactNode;
-  /**
-   * @zh 外层类名
-   * @en Outer class name
-   * @version 1.1.0
-   */
-  wrapperClassName?: string;
-  wrapperStyle?: React.CSSProperties;
-  /**
-   * @zh 是否超出隐藏
-   * @en Is it beyond hidden
-   * @defaultValue true
-   * @version 1.1.0
-   */
-  ellipsis?: boolean;
-}
-
 export interface BaseParagraphTextProps {
   /**
    * @zh 显示的内容
@@ -107,7 +83,7 @@ export interface BaseParagraphTextProps {
 
 export interface LinkTextProps
   extends BaseParagraphTextProps,
-    Omit<AnchorHTMLAttributes<any>, 'type' | 'className'> {
+    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'type' | 'className'> {
   /**
    * @zh 内容类型
    * @en content type

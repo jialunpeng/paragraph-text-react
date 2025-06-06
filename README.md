@@ -15,13 +15,13 @@ Available as an npm package
 
 ```shell
 // with npm
-npm install @paragraph-text/react
+npm install paragraph-text-react
 
 // with yarn
-yarn add @paragraph-text/react
+yarn add paragraph-text-react
 
 // with pnpm
-pnpm add @paragraph-text/react
+pnpm add paragraph-text-react
 
 ```
 
@@ -31,7 +31,7 @@ pnpm add @paragraph-text/react
 ```ts
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ParagraphText } from '@paragraph-text/react';
+import { ParagraphText } from 'paragraph-text-react';
 import 'paragraph-text/dist/css/index.min.css';
 
 function App() {
@@ -49,7 +49,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 ```ts
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ParagraphText } from '@paragraph-text/react';
+import { ParagraphText } from 'paragraph-text-react';
 import 'paragraph-text/dist/css/index.min.css';
 
 function App() {
@@ -67,7 +67,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 ```ts
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ParagraphText } from '@paragraph-text/react';
+import { ParagraphText } from 'paragraph-text-react';
 import 'paragraph-text/dist/css/index.min.css';
 
 function App() {
@@ -85,7 +85,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 ```ts
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ParagraphText } from '@paragraph-text/react';
+import { ParagraphText } from 'paragraph-text-react';
 import 'paragraph-text/dist/css/index.min.css';
 
 function App() {
@@ -104,7 +104,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 ```ts
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ParagraphText } from '@paragraph-text/react';
+import { ParagraphText } from 'paragraph-text-react';
 import 'paragraph-text/dist/css/index.min.css';
 
 function App() {
@@ -122,7 +122,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 ```ts
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ParagraphText } from '@paragraph-text/react';
+import { ParagraphText } from 'paragraph-text-react';
 import 'paragraph-text/dist/css/index.min.css';
 
 function App() {
@@ -142,7 +142,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 ```ts
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ParagraphText } from '@paragraph-text/react';
+import { ParagraphText } from 'paragraph-text-react';
 import 'paragraph-text/dist/css/index.min.css';
 
 function App() {

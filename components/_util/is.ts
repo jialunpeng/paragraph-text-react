@@ -1,7 +1,5 @@
 import { Dayjs } from 'dayjs';
 import { isValidElement } from 'react';
-import ReactDOM from 'react-dom';
-import { isForwardRef } from 'react-is';
 
 const opt = Object.prototype.toString;
 
@@ -122,52 +120,6 @@ export const isClassComponent = (element: any): boolean => {
 // element 是合成的 dom 元素或者字符串，数字等
 export const isDOMElement = (element: any): boolean => {
   return isValidElement(element) && typeof element.type === 'string';
-};
-
-export const isReact18 = Number(ReactDOM.version?.split('.')[0]) > 17;
-export const isReact19 = Number(ReactDOM.version?.split('.')[0]) > 18;
-
-// 基本copy:  https://github.com/facebook/react/blob/main/packages/react-is/src/ReactIs.js
-// 改动了点逻辑
-const isForwardRefReact = (object: any) => {
-  if (!isReact19) {
-    return isForwardRef(object);
-  }
-  // react 19 兜底走以下逻辑
-  const REACT_ELEMENT_TYPE = Symbol.for('react.element');
-  // react 19 改名了
-  const NEW_REACT_ELEMENT_TYPE = Symbol.for('react.transitional.element');
-  const REACT_FORWARD_REF_TYPE = Symbol.for('react.forward_ref');
-
-  if (typeof object === 'object' && object !== null) {
-    const $$typeof = object.$$typeof;
-
-    if (
-      $$typeof === REACT_ELEMENT_TYPE ||
-      $$typeof === NEW_REACT_ELEMENT_TYPE
-    ) {
-      const type = object.type;
-      const $$typeofType = type && type.$$typeof;
-      return $$typeofType === REACT_FORWARD_REF_TYPE;
-    }
-  }
-  return false;
-};
-// 传入的元素是否可以设置 ref 饮用
-export const supportRef = (element: any): boolean => {
-  if (isDOMElement(element)) {
-    return true;
-  }
-
-  if (isForwardRefReact(element)) {
-    return true;
-  }
-
-  if (isReactComponent(element)) {
-    return isClassComponent(element); // 函数组件且没有被 forwardRef，无法设置 ref
-  }
-
-  return false;
 };
 
 export const isLink = (text?: React.ReactNode) => {

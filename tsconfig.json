@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
-    "outDir": "es",
-    "jsx": "react",
-    "target": "es5",
-    "module": "es6",
-    "lib": ["es5", "dom"],
+    "jsx": "react-jsx",
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -16,16 +15,22 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "declaration": true,
+    "declarationMap": false,
+    "declarationDir": "./dist/es", // 类型文件直接输出到 es 目录
+    "emitDeclarationOnly": true, // 关键：让 tsc 生成 JS 和类型文件
+    "outDir": "./dist/es",
+    "rootDir": "./components", // 关键：源码根目录设为 components
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "noEmit": true,
+    "noEmit": false,
     "baseUrl": "./",
     "paths": {
-      "paragraph-text": ["components/index.tsx"],
-      "paragraph-text/icon": ["icon/index.js"]
+      "paragraph-text": ["components/index.ts"],
+      "paragraph-text/icon": ["components/icons/index.ts"] // 修正路径
     }
   },
-  "include": ["components/**/*", "hooks/**/*", "icon/**/*"]
+  "include": ["components/**/*"], // 只处理 components 目录
+  "exclude": ["node_modules", "**/__tests__/**", "dist"]
 }

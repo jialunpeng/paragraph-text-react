@@ -1,0 +1,13 @@
+.rs-link-container {
+  display: flex;
+
+  &.ellipsis {
+    overflow: hidden;
+
+    > .rs-link {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react'
+import '../components/style/index.less';
 
 const preview: Preview = {
   parameters: {
