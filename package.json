@@ -1,6 +1,6 @@
 {
   "name": "paragraph-text-react",
-  "version": "1.1.17",
+  "version": "1.1.19",
   "private": false,
   "publishConfig": {
     "access": "public"

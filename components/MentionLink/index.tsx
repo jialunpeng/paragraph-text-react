@@ -13,7 +13,7 @@ const MentionLink = forwardRef<ChildComponentRef, MentionLinkProps>(
     const { href, children, className, ellipsis, ...others } = props;
 
     const spanCls = classNames(`rs-link-container ${className || ''}`, {
-      ellipsis,
+      'rs-hidden': ellipsis,
     });
 
     return (

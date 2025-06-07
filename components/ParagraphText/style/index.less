@@ -1,24 +1,25 @@
+@import '../../style/default.less';
 @import '../../Link/style/index.less';
 @import '../../style/icon.less';
 
-.rs-paragraph-text {
+.@{prefix}-paragraph-text {
   display: flex;
   align-items: center;
 
-  &.hidden {
+  &.@{prefix}-hidden {
     overflow: hidden;
   }
 
-  > .content {
+  > .@{prefix}-content {
     flex: 1;
 
-    &.truncate {
+    &.@{prefix}-truncate {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
 
-    &.text-line-clamp {
+    &.@{prefix}-text-line-clamp {
       display: -webkit-box;
       white-space: normal;
       -webkit-box-orient: vertical;
@@ -26,20 +27,20 @@
       -webkit-line-clamp: var(--line-clamp-num);
     }
 
-    &.cursor-pointer {
+    &.@{prefix}-cursor-pointer {
       cursor: pointer;
     }
   }
 
-  > .icon {
+  > .@{prefix}-icon {
     margin-left: 4px;
     cursor: pointer;
 
-    &.icon-copy {
+    &.@{prefix}-icon-copy {
       color: rgb(78, 89, 105);
     }
 
-    &.icon-check {
+    &.@{prefix}-icon-check {
       color: green;
     }
   }

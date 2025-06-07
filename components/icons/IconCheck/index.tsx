@@ -10,7 +10,7 @@ const IconCheck = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
     xmlns="http://www.w3.org/2000/svg"
     stroke="currentColor"
     strokeWidth="4"
-    className="icon icon-check"
+    className="rs-icon rs-icon-check"
     {...omit(props, ['className'])}
   >
     <path

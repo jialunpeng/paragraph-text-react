@@ -1,11 +1,13 @@
+@import '../../style/default.less';
 @import '../../Link/style/index.less';
-.rs-link-container {
+
+.@{prefix}-link-container {
   display: flex;
 
-  &.ellipsis {
+  &.@{prefix}-hidden {
     overflow: hidden;
 
-    > .rs-link {
+    > .@{prefix}-link {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;

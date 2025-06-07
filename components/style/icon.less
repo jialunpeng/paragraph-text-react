@@ -1,9 +1,26 @@
-.icon {
+@import './default.less';
+
+.@{prefix}-icon {
   display: inline-block;
   color: inherit;
   font-style: normal;
   width: 1em;
   height: 1em;
   vertical-align: -2px;
+  stroke: currentColor;
+}
+
+.@{prefix}-icon[fill='currentColor'] {
+  fill: currentColor;
+  stroke: none;
+}
+
+.@{prefix}-icon[stroke='currentColor'] {
+  stroke: currentColor;
+  fill: none;
+}
+
+.@{prefix}-icon[fill='currentColor'][stroke='currentColor'] {
+  fill: currentColor;
   stroke: currentColor;
 }

@@ -10,7 +10,7 @@ const IconCopy = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
     xmlns="http://www.w3.org/2000/svg"
     stroke="currentColor"
     strokeWidth="4"
-    className="icon icon-copy"
+    className="rs-icon rs-icon-copy"
     {...omit(props, ['className'])}
   >
     <path

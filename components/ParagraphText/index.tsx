@@ -202,14 +202,14 @@ const ParagraphText = forwardRef<HTMLDivElement, ParagraphTextProps>(
     }, [ellipsis, isToolTip, isTextTip, isRichTip, text, children, href]);
 
     const paragraphCls = classNames(`rs-paragraph-text ${className || ''}`, {
-      hidden: ellipsis,
+      'rs-hidden': ellipsis,
     });
 
-    const textCls = classNames('content', {
-      link: type === 'link',
-      truncate: ellipsis && lineClamp <= 1,
-      'text-line-clamp': ellipsis && lineClamp && lineClamp > 1,
-      'cursor-pointer': type === 'link' || (ellipsis && isTextTip),
+    const textCls = classNames('rs-content', {
+      'rs-link': type === 'link',
+      'rs-truncate': ellipsis && lineClamp <= 1,
+      'rs-text-line-clamp': ellipsis && lineClamp && lineClamp > 1,
+      'rs-cursor-pointer': type === 'link' || (ellipsis && isTextTip),
     });
 
     const el = useMemo(() => {
